@@ -1,5 +1,3 @@
 const connection = require('./../config/connection');
 
-module.exports = postData => {
-    
-}
+module.exports = (postData) => {};
