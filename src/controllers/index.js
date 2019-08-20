@@ -4,7 +4,7 @@ const home = require('./home');
 
 router.get('/', home);
 
-router.use('*', client);
+router.all('*', client);
 router.use(server);
 
 module.exports = router;
