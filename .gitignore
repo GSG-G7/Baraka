@@ -3,3 +3,4 @@ config.env
 coverage
 .nyc_output
 .env
+.vscode
