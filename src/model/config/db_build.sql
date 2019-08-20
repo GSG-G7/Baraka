@@ -20,11 +20,4 @@ CREATE TABLE items (
   user_id INTEGER REFERENCES users(id)
 );
 
-
-
-INSERT INTO lists (name) VALUES ('Project 1'),('Project 2');
-INSERT INTO users (name) VALUES ('Mai');
-INSERT INTO items (name, content, list_id, user_id) VALUES ('Item 1', 'Description text', 1, 1);
-
- 
 COMMIT;
