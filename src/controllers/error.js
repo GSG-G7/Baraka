@@ -1,7 +1,7 @@
-const client = (req, res) => {
-  res.status(404).send('404 not found');
+exports.client = (req, res) => {
+  res.status(404).render('404', { title: 'page not found 404' });
 };
-const server = (err, req, res, next) => {
-  res.status(500).send('500 internal server error');
+
+exports.server = (err, req, res, next) => {
+  res.status(500).render('500', { title: 'internal server error 500' });
 };
-module.exports = { client, server };

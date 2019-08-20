@@ -1,5 +1,6 @@
 const app = require('./app');
 
-app.listen(() => {
-  console.log(`http://localhost:${app.get('port')}`);
+const port = app.get('port');
+app.listen(port, () => {
+  console.log(`http://localhost:${port}`);
 });
