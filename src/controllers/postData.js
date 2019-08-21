@@ -13,7 +13,8 @@ const adduser = name =>
     .find(name)
     .then(id => {
       // -1 or something else
-      if (id === -1) return users.insert(name).then(() => users.find());
+      if (id === -1) return users.insert(name).then(() => users.find(name));
+      // .then(console.log);
       // return id;
     })
     .catch(err => err);
