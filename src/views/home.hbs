@@ -5,6 +5,7 @@
             placeholder="Add new list" required>
         <input id='submit' class="home__main__add" type="submit" value="Add List" aria-label="Add List">
     </form>
+    <p class="error-msg"></p>
     <div class="home__results">
         {{#each result}}
         <div class="home__list">
@@ -22,9 +23,11 @@
             </form>
             
             {{#each this.list}}
-                <h2 class="item__title">{{this.title}}</h2>
-                <p class="item__content">{{this.content}}</p>
-                <span class="item__user">{{this.username}}</span>
+                <div class="list__item">
+                    <h2 class="item__title">{{this.title}}</h2>
+                    <p class="item__content">{{this.content}}</p>
+                    <span class="item__user">{{this.username}}</span>
+                </div>
             {{/each}}
             
         </div>
