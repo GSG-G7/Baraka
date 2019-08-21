@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === 'test') {
 } else {
   dbURL = process.env.DEV_DB_URL;
 }
+
 const options = {
   connectionString: dbURL,
   ssl: true
