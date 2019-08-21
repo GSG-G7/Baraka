@@ -11,7 +11,7 @@ const format = data => {
   return array;
 };
 const getFormattedData = () => {
-  const sql = `select items.id,items.name AS title, content,users.name as username,list_id,lists.name from items inner join users ON users.id = items.user_id inner join lists on lists.id = items.user_id order by items.list_id`;
+  const sql = `SELECT items.id,items.name AS title, content,users.name AS username,list_id,lists.name AS listName FROM items INNER JOIN users ON users.id = items.user_id INNER JOIN lists ON lists.id = items.user_id ORDER BY items.list_id`;
   return connection
     .query(sql)
     .then(result => result.rows)
