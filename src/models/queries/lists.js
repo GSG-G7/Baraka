@@ -9,7 +9,7 @@ const insert = name => {
 };
 
 const selectAll = () => {
-  const sql = 'SELECT * from lists ;';
+  const sql = 'SELECT * FROM lists ;';
   return connection.query(sql);
 };
 

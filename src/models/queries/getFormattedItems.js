@@ -26,6 +26,5 @@ const getFormattedData = () => {
     .then(format)
     .catch(err => err);
 };
-getFormattedData();
 
 module.exports = getFormattedData;
