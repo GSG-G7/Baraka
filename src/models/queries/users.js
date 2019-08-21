@@ -2,7 +2,7 @@ const connection = require('../config/connection');
 
 const insert = name => {
   const sql = {
-    text: 'INSERT INTO lists (name) VALUES ($1);',
+    text: 'INSERT INTO users (name) VALUES ($1);',
     values: [name]
   };
   return connection.query(sql);
