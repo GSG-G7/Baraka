@@ -3,7 +3,7 @@ const { lists, items, users } = require('../models/queries/index');
 exports.addList = (req, res, next) => {
   const listInfo = req.body;
   lists
-    .insert(listInfo)
+    .insert(listInfo.list)
     .then(() => res.redirect('/'))
     .catch(next);
 };
@@ -14,7 +14,7 @@ const adduser = name =>
     .then(id => {
       // -1 or something else
       if (id === -1) return users.insert(name).then(() => users.find());
-      return id;
+      // return id;
     })
     .catch(err => err);
 
