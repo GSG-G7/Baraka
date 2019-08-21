@@ -3,23 +3,28 @@ const { lists, items, users } = require('../models/queries/index');
 exports.addList = (req, res, next) => {
   const listInfo = req.body;
   lists
-    .insert(listInfo)
+    .insert(listInfo.list)
     .then(() => res.redirect('/'))
-    .catch(err => next(err));
+    .catch(next);
 };
 
+const adduser = name => {
+  users
+    .find(name)
+    .then(id => {
+      // 1 or 0
+      if (!id) users.insert(name).then(() => users.find(name).then(console.log));
+      return id;
+    })
+    .catch(err => err);
+};
+users.find('asd').then(console.log);
 exports.addItem = (req, res, next) => {
   const itemInfo = req.body;
-  items
-    .insert(itemInfo)
-    .then(() => res.redirect('/'))
-    .catch(err => next(err));
-};
-
-exports.adduser = (req, res, next) => {
-  const userInfo = req.body;
-  users
-    .insert(userInfo)
-    .then(() => res.redirect('/'))
-    .catch(err => next(err));
+  // console.log(itemInfo);
+  adduser(itemInfo.item_user).catch(next);
+  // items
+  //   .insert(itemInfo)
+  //   .then(() => res.redirect('/'))
+  //   .catch(err => next(err));
 };
