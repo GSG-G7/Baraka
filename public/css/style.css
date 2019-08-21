@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  background-image: url('../assets/bg.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.home__header {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.7rem;
+  padding: 2rem;
+  text-align: center;
+  color: #df496f;
+}
+
+.home__form {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.home__main__input {
+  border: none;
+  outline: none;
+  padding: 0.9rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 60%;
+}
+
+.home__main__input::placeholder {
+  font-size: 20px;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  color: red;
+}
+
+.home__main__add {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.9rem 2rem;
+  margin: 0.4rem 0.3rem;
+  border-radius: 11px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: capitalize;
+  background: #df496f;
+}
+
+.home__results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto 3rem;
+}
+
+.gifs__gif {
+  width: 30%;
+  margin: 1rem;
+}
+.gifs__title {
+  color: #ffffff;
+  margin-top: 0.5rem;
+  text-align: left;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  width: 80%;
+}
+.gifs__image {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.home__main {
+  min-height: 67.6vh;
+}
+.footer {
+  width: 100%;
+  background: #1f1c1c81;
+  text-align: center;
+  padding: 1.5rem;
+  color: #ffffff;
+}
+
+.error__img {
+  display: block;
+  max-width: 40vw;
+  margin: 5vh auto 1rem auto;
+}
+
+.error__header {
+  font-family: sans-serif;
+  color: red;
+  margin-top: 9vh;
+  text-align: center;
+  text-transform: capitalize;
+}
+.contact {
+  margin: 1rem;
+}
+.contact__button {
+  background: #df496f;
+  color: #000000;
+  padding: 0.3rem 0.5rem;
+  border: none !important;
+}
+.contact input {
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  text-align: center;
+  margin: 0.2rem;
+}
+
+.contact input:valid {
+  border: 2px solid green;
+}
+
+.contact input:invalid {
+  border: 2px solid #df496f;
+}
+
+@media (max-width: 600px) {
+  .home__form {
+    margin: 1rem 0.4rem;
+  }
+  .gifs {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0.3rem;
+  }
+  .gifs__gif {
+    width: 80%;
+    margin: 1rem auto;
+    display: block;
+  }
+  .gifs__image {
+    width: 100%;
+  }
+}
