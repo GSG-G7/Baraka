@@ -3,5 +3,5 @@ exports.client = (req, res) => {
 };
 
 exports.server = (err, req, res, next) => {
-  res.status(500).render('500', { title: 'internal server error 500' });
+  res.status(500).render('500', { title: 'internal server error 500', err });
 };

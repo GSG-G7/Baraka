@@ -12,8 +12,18 @@ const selectAll = () => {
   const sql = 'SELECT * from users ;';
   return connection.query(sql);
 };
-
+const find = name => {
+  const sql = {
+    text: 'SELECT id from users WHERE users.name = $1 ;',
+    values: [name]
+  };
+  return connection
+    .query(sql)
+    .then(result => result.rows[0].id)
+    .catch(() => -1);
+};
 module.exports = {
   insert,
-  selectAll
+  selectAll,
+  find
 };
