@@ -1,9 +1,9 @@
 const router = require('express').Router();
 
 const { client, server } = require('./error');
-const home = require('./home');
+const { get, post } = require('./home');
 
-router.get('/', home);
+router.get('/', get);
 
 router.all('*', client);
 router.use(server);
