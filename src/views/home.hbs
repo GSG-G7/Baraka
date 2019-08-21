@@ -8,14 +8,15 @@
     <div class="home__results">
         {{#each result}}
         <div class="home__list">
-            <h1 class="list__title"><span hidden>{{this.list_id}}</span>{{this.listname}}</h1>
+            <h1 class="list__title">{{this.listname}}</h1>
             
             <form class="list__form" action="/addItem" method="POST">
-                <input id='addItemName' class="item__name" type="text" value="" aria-label="input" name="item"
+                <input type="number" name="list_id" value="{{this.list_id}}" hidden>
+                <input id='addItemName' class="item__name" type="text" value="" aria-label="input" name="item_name"
                 placeholder="Add new item" required>
-                <input id='addItemContent' class="item__content" type="text" value="" aria-label="input" name="item"
+                <input id='addItemContent' class="item__content" type="text" value="" aria-label="input" name="item_content"
                 placeholder="Add descripition" required>
-                <input id='addItemUser' class="item__user" type="text" value="" aria-label="input" name="item"
+                <input id='addItemUser' class="item__user" type="text" value="" aria-label="input" name="item_user"
                     placeholder="Add user name" required>
                 <input id='submit' class="item__add" type="submit" value="Add Item" aria-label="Add Item">
             </form>
