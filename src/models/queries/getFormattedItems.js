@@ -12,6 +12,7 @@ const format = data => {
   for (let i = 0; i < array.length; i += 1) {
     array2.push({
       listname: array[i][0].listname,
+      list_id: array[i][0].list_id,
       list: array[i]
     });
   }
