@@ -1,7 +1,9 @@
-const get = require('./getData');
-const insert = require('./insertData');
+const items = require('./items');
+const lists = require('./lists');
+const users = require('./users');
 
 module.exports = {
-  get,
-  insert
+  items,
+  lists,
+  users
 };
