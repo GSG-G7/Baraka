@@ -8,14 +8,14 @@
 
 body {
   background-color: #000;
-  background-image: url('../assets/background.jpeg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.6) ), url('../assets/bg.jpg');
   background-size: cover;
   background-position: top center;
 }
 
 .home__header {
   font-family: 'Pacifico', cursive;
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding: 2rem;
   text-align: center;
   color: #0f0f0f;
@@ -37,10 +37,10 @@ body {
 }
 
 .home__main__input::placeholder {
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0.5;
   letter-spacing: 2px;
-  color: red;
+  color: #831ac4;
 }
 
 .home__main__add {
@@ -50,11 +50,11 @@ body {
   padding: 0.9rem 2rem;
   margin: 0.4rem 0.3rem;
   border-radius: 11px;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   text-transform: capitalize;
-  background: #df496f;
+  background: #831ac4;
 }
 
 .home__results {
@@ -68,24 +68,25 @@ body {
   width: 30%;
   margin: 1rem;
   text-align: center;
-  border: 2px solid green;
+  border: 2px solid #831ac4;
   border-radius: 10px;
 }
 .list__title {
-  border-radius: 10px 10px 0 0;
-  background: gray;
+  background: #9727dd;
   text-align: center;
   color: #ffffff;
   font-family: sans-serif;
   text-transform: capitalize;
   width: 100%;
+  border-radius: 10px 10px 0 0;
+  padding: 0.6rem;
 }
 .list__form {
   width: 80%;
   border: none;
   border-radius: 5px;
   text-align: center;
-  margin: 2px;
+  margin: 5px auto;
 }
 .list__form input {
   width: 100%;
@@ -97,8 +98,12 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+.item__add{
+  cursor: pointer;
+  background: #c41aaa;
+  color: #ffffff
+}
 .list__item {
-  border: 1px solid black;
   display: block;
   width: 100%;
   border-top-left-radius: 4px;

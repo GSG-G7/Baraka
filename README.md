@@ -6,6 +6,9 @@
 ## **Why did we built our app ?**
   Database is built to have many lists, each list will have many items that is added by user, using handlebars and postgres to display and control this data.
 
+## **Schema digram :**
+ ![alt text](public/assets/sql.png)
+
 ## **How our progress was during the building of our app ??**
  
  - Have node server and a database using express
@@ -26,3 +29,6 @@
  - Display data to the user.
 
 ## **User Journey :**
+ - The user add the list.
+ - The user can add the item with details (title, content and user name) in specific list
+ - The user can view all lists with its items and tasks.
