@@ -17,8 +17,8 @@ tape('test success for / endpoint', t => {
         t.error(err);
         t.end();
       } else {
-        const isInclode = res.text.includes('Baraka');
-        t.equals(isInclode, true, 'should response');
+        const isInclude = res.text.includes('Baraka');
+        t.equals(isInclude, true, 'should response');
         t.end();
       }
     });
