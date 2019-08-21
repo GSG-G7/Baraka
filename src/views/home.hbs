@@ -6,20 +6,13 @@
         <input id='submit' class="home__main__add" type="submit" value="Add List" aria-label="Add List">
     </form>
     <div class="home__results">
-        {{#each lists}}
+        {{#each result}}
         <div class="home__list">
-            <h1>{{this.name}}</h1>
-            <ul class="list__items">
-                {{#each items}}
-                <li class="item">
-                    <div class="item__data">
-                        <h2>{{this.name}}</h2>
-                        <p>{{this.content}}</p>
-                        <span>{{this.user}}</span>
-                    </div>
-                </li>
-                {{/each}}
-            </ul>
+            {{#each this}}
+                <h2>{{this.title}}</h2>
+                <p>{{this.content}}</p>
+                <span>{{this.username}}</span>
+            {{/each}}
         </div>
         {{/each}}
     </div>

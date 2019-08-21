@@ -1,10 +1,7 @@
-const { getLists, getItems, getUsers } = require('./getData');
+const getFormattedItems = require('../models/queries/getFormattedItems');
 
 exports.get = (req, res, next) => {
-  const lists = getLists(req, res, next);
-  const items = getItems(req, res, next);
-  const users = getUsers(req, res, next);
-  Promise.all([lists, items, users]).then(() => {
-    res.render('home', { title: 'Baraka', lists, items, users });
-  });
+  getFormattedItems()
+    .then(result => res.render('home', { title: 'Baraka', result }))
+    .catch(err => next(err));
 };

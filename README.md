@@ -26,4 +26,3 @@
  - Display data to the user.
 
 ## **User Journey :**
-
