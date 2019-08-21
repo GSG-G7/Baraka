@@ -22,9 +22,11 @@
             </form>
             
             {{#each this.list}}
-                <h2 class="item__title">{{this.title}}</h2>
-                <p class="item__content">{{this.content}}</p>
-                <span class="item__user">{{this.username}}</span>
+                <div class="list__item">
+                    <h2 class="item__title">{{this.title}}</h2>
+                    <p class="item__content">{{this.content}}</p>
+                    <span class="item__user">{{this.username}}</span>
+                </div>
             {{/each}}
             
         </div>
