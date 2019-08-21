@@ -7,6 +7,8 @@ require('env2')('config.env');
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+
 app.disable('x-powered-by');
 app.set('port', process.env.PORT || 5000);
 

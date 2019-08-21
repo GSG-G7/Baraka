@@ -1,1 +1,9 @@
-<h1>{{title}}</h1>
+<section>
+    {{> header}}
+    <form class="home__form" action="" method="POST">
+        <input id='addlist' class="home__main__input" type="text" value="" aria-label="input" name="list"
+            placeholder="Add new list" required>
+        <input id='submit' class="home__main__add" type="submit" value="Add List" aria-label="Add List">
+    </form>
+    {{> footer}}   
+</section>

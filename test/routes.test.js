@@ -17,9 +17,24 @@ tape('test success for / endpoint', t => {
         t.error(err);
         t.end();
       } else {
-        console.log(res.text);
         const isInclode = res.text.includes('Baraka');
         t.equals(isInclode, true, 'should response');
+        t.end();
+      }
+    });
+});
+
+tape('test for client error 404', t => {
+  supertest(app)
+    .get('/err')
+    .expect(404)
+    .expect('Content-Type', /html/)
+    .end((err, res) => {
+      if (err) {
+        t.error(err);
+        t.end();
+      } else {
+        t.equal(res.clientError, true, 'should be client error');
         t.end();
       }
     });
