@@ -8,10 +8,11 @@
     <div class="home__results">
         {{#each result}}
         <div class="home__list">
-            {{#each this}}
-                <h2>{{this.title}}</h2>
-                <p>{{this.content}}</p>
-                <span>{{this.username}}</span>
+            <span>{{this.list_id}}</span><h1 class="list__title">{{this.listname}}</h1>
+            {{#each this.list}}
+                <h2 class="item__title">{{this.title}}</h2>
+                <p class="item__content">{{this.content}}</p>
+                <span class="item__user">{{this.username}}</span>
             {{/each}}
         </div>
         {{/each}}
