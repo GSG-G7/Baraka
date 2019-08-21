@@ -20,8 +20,7 @@ const find = name => {
   return connection
     .query(sql)
     .then(result => result.rows[0].id)
-    .then(console.log)
-    .catch(err => -1);
+    .catch(() => -1);
 };
 module.exports = {
   insert,

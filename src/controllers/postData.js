@@ -8,23 +8,30 @@ exports.addList = (req, res, next) => {
     .catch(next);
 };
 
-const adduser = name => {
+const adduser = name =>
   users
     .find(name)
     .then(id => {
-      // 1 or 0
-      if (!id) users.insert(name).then(() => users.find(name).then(console.log));
-      return id;
+      // -1 or something else
+      if (id === -1) return users.insert(name).then(() => users.find(name));
+      // .then(console.log);
+      // return id;
     })
     .catch(err => err);
-};
-users.find('asd').then(console.log);
+
 exports.addItem = (req, res, next) => {
-  const itemInfo = req.body;
-  // console.log(itemInfo);
-  adduser(itemInfo.item_user).catch(next);
-  // items
-  //   .insert(itemInfo)
-  //   .then(() => res.redirect('/'))
-  //   .catch(err => next(err));
+  adduser(req.body.item_user)
+    .then(id => {
+      const itemInfo = {
+        list_id: +req.body.list_id,
+        name: req.body.item_name,
+        content: req.body.item_content,
+        user_id: id
+      };
+      items
+        .insert(itemInfo)
+        .then(() => res.redirect('/'))
+        .catch(next);
+    })
+    .catch(next);
 };
