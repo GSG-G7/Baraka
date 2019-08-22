@@ -23,9 +23,10 @@ CREATE TABLE items (
 INSERT INTO lists (name) VALUES ('Project 1'),('Project 2'),('Project 3');
 INSERT INTO users (name) VALUES ('Mai'),('Mohammed'),('Imad'),('Fadi');
 INSERT INTO items (name, content, list_id, user_id) 
-VALUES ('Item 1', 'Description text', 1, 1),
-('Item 2', 'Description text', 1, 2),
-('Item 3', 'Description text', 1, 3),
-('Item 4', 'Description text', 2, 1);
+VALUES ('Item 1', 'Description text Description textDescription text', 1, 1),
+('Item 2', 'Description text Description textDescription text ', 1, 2),
+('Item 3', 'Description text Description textDescription text', 1, 3),
+('Item 22', 'Description text Description textDescription text', 2, 4),
+('Item 4', 'Description text Description textDescription text', 2, 1);
  
 COMMIT;
