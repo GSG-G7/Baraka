@@ -13,6 +13,7 @@ const adduser = name =>
     .find(name)
     .then(id => {
       if (id === -1) return users.insert(name).then(() => users.find(name));
+      return id;
     })
     .catch(err => err);
 
